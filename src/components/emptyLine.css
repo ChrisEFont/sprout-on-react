@@ -1,0 +1,109 @@
+.line{
+    background-color: rgb(229, 238, 255);
+    display: grid;
+    grid-template-columns: 40px min-content min-content min-content min-content min-content;
+    font-family: monospace;
+    font-size: 14px;
+    padding: 5px;
+    width: max-content;
+    min-width: max-content;    
+}
+
+.line:hover{
+    background-color: rgb(201, 220, 255);
+}
+
+.line input,
+.line select,
+.line textarea{
+    font-family: inherit;
+    font-size: inherit;
+    height: 2.2em;
+    padding: 0 0.4em;
+    box-sizing: border-box;
+    line-height: 1.2;
+    border-radius: 5px;
+    margin: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.15);   /* borde súper suave */
+    border-radius: 4px;                      /* esquinas suaves */
+    padding: 0.3em 0.4em;                    /* cómodo pero compacto */
+    background-color: white;                 /* para contraste limpio */
+    transition: border-color 0.15s ease;
+}
+
+.line button{
+    font-family: inherit;
+    font-size: inherit;
+    height: 2.2em;
+    padding: 0 0.4em;
+    box-sizing: border-box;
+    line-height: 1.2;
+    border-radius: 5px;
+    margin: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.15);   /* borde súper suave */
+    border-radius: 4px;                      /* esquinas suaves */
+    padding: 0.3em 0.4em;                    /* cómodo pero compacto */
+}
+
+.line input:hover,
+.line select:hover,
+.line button:hover,
+.line textarea:hover{
+    border-color: rgba(0, 0, 0, 0.35);
+}
+
+.line input:focus,
+.line select:focus,
+.line textarea:focus{
+    outline: none;
+    border-color: rgba(59, 59, 255, 0.644);
+    box-shadow: 0 0 4px rgba(0, 80, 255, 0.35)
+}
+
+.x-box{
+    display: flex;
+    flex-direction: row;
+}
+
+.y-box{
+    display: flex;
+    flex-direction: column;
+}
+
+#initial-data{
+    margin: 5px;
+    
+}
+
+.initial-grid{
+    display: grid;
+    grid-template-columns: 8ch 10ch 10ch 8ch 12ch 12ch;
+}
+
+.description{
+    max-width: 100%;
+}
+
+.coterm-grid{
+    margin: 5px;
+    display: grid;
+    grid-template-columns: 16ch 8ch 14ch 14ch;
+}
+
+.discount-grid{
+    margin: 4px;
+    display: grid;
+    grid-template-columns: 6ch 30px 6ch;
+}
+
+.customer-grid{
+    margin: 5px;
+    display: grid;
+    grid-template-columns: 14ch 14ch;
+}
+
+.internal-grid{
+    margin: 5px;
+    display: grid;
+    grid-template-columns: 45px 12ch 12ch;
+}

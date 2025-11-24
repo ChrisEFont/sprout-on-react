@@ -1,0 +1,58 @@
+.line {
+    font-family: sans-serif;
+      --plantilla-columnas: 
+        3ch     /* Nº */
+        6ch    /* tipo venta */
+        10ch   /*sku*/
+        1fr     /* Descripción */
+        4ch     /* Cantidad */
+        12ch    /* Contrato */
+        10ch    /* Precio Lista */
+        12ch    /* Total Lista */
+        5ch     /* Es Coterm */
+        11ch    /* Fecha Inicio */
+        11ch    /* Fecha Fin */
+        10ch    /* Precio Lista Coterm */
+        12ch    /* Total Lista Coterm */
+        4ch     /* Descuento RH */
+        4ch     /* Traslada Descuento */
+        4ch     /* Descuento NX */
+        10ch    /* Precio Partner */
+        12ch    /* Total Partner */        
+        12ch  /* Total FOB */
+        4ch    /* Margen */
+        40px   /* Acción */;
+            display: grid;
+                grid-template-columns: var(--plantilla-columnas);
+                padding-top: 3px;
+                padding-bottom: 3px;
+                background-color: rgba(196, 196, 196, 0.5);
+                gap: 5px;
+}
+
+.x-box{
+    display: flex;
+    flex-direction: row;
+}
+
+.y-box{
+    display: flex;
+    flex-direction: column;
+}
+
+.line[data-libre="false"] {
+    background-color: #cee0e7; /* resaltado líneas ya agregadas */
+}
+
+.line:hover{
+    background-color: rgb(165, 185, 223);
+}
+
+.line > *{
+    border: none;
+    border-radius: 3px;
+}
+
+.line span{
+    text-align: center;
+}
