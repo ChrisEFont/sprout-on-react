@@ -1,6 +1,7 @@
 import './EmptyLine'
 import {useState} from 'react'
 import { EmptyLine } from './EmptyLine'
+import {EmptyLineR2} from './EmptyLineR2/EmptyLineR2.jsx'
 
 export function PrincingTable(){
 
@@ -25,6 +26,7 @@ export function PrincingTable(){
     return (
         <>
             <EmptyLine addLine={addLine}/>
+            <EmptyLineR2></EmptyLineR2>            
         </>
     )
 

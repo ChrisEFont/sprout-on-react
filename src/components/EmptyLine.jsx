@@ -15,7 +15,7 @@ export function EmptyLine(props){
     const [listPrice, setListPrice]=useState("0");
     const [totalListPrice, setTotalListPrice]=useState("");
     const [coterm, setCoterm]=useState("0");
-    const [days, setDays]=useState();
+    const [days, setDays]=useState(0);
     const [startDate, setStartDate]=useState("");
     const [endDate, setEndDate]=useState("");
     const [cotermPrice, setCotermPrice]=useState("");
