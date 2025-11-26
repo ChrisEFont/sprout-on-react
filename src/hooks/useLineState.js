@@ -9,7 +9,7 @@ export function useLineState(initial = {}) {
     description: '',
     contract: '',
     quantity: 0,
-    listPrice: 0,
+    listPrice: "",
     totalListPrice: 0,
     coterm: '0',
     days: '',

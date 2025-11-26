@@ -4,6 +4,8 @@ import { useLineState } from '../../hooks/useLineState';
 import { BasicInfo } from './BasicInfo';
 import { CotermInfo } from './CotermInfo';
 import { useLineEffect } from '../../hooks/useLineEffect';
+import { DiscounInfo } from './DiscountInfo';
+import { CustomerPrices } from './CustomerPrices';
 
 
 export function EmptyLineR2(props){
@@ -17,8 +19,11 @@ export function EmptyLineR2(props){
 
             <span className="index">⬆️</span>
             <BasicInfo fields={line} refs={refs} setField={setField} aN={aN} />
-            <CotermInfo fields={line} refs={refs} setField={setField} aN={aN}/>
-            <button onClick={console.log(line)}></button>
+            <CotermInfo fields={line} refs={refs} setField={setField} aN={aN} />
+            <DiscounInfo fields={line} refs={refs} setField={setField} aN={aN} />
+            <CustomerPrices fields={line} refs={refs} setField={setField} aN={aN}/>
+
+            <button onClick={console.log(line)}>ADD</button>
         </div>
     )
 }
