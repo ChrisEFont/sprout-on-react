@@ -2,6 +2,7 @@ import './EmptyLine'
 import {useState} from 'react'
 import { EmptyLine } from './EmptyLine'
 import {EmptyLineR2} from './EmptyLineR2/EmptyLineR2.jsx'
+import {AddedLine} from './AddedLine/AddedLine.jsx'
 
 export function PrincingTable(){
 
@@ -25,8 +26,14 @@ export function PrincingTable(){
 
     return (
         <>
-            <EmptyLine addLine={addLine}/>
-            <EmptyLineR2></EmptyLineR2>            
+            {lines.map((line, index)=>(
+                <AddedLine 
+                key={index}
+                index={index}
+                data={line}
+                />
+            ))}
+            <EmptyLineR2 addLine={addLine}></EmptyLineR2>           
         </>
     )
 

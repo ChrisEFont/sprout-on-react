@@ -15,9 +15,8 @@ export function EmptyLineR2(props){
 
     useLineEffect(line, setField, aN);
 
-    function submitLine(){
+    function submitLine(line){
         props.addLine(line);
-        console.log(line)
     }
 
     return(
