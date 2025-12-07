@@ -9,31 +9,38 @@ export function PrincingTable(){
     const [lines, setLines] = useState([]);
 
     function addLine(line){
-        setLines([...lines, line]);
+        setLines(prev => [...prev, { id: crypto.randomUUID(), ...line }]);
     }
 
     function deleteLine(index){
         setLines((prev)=>{
-            prev.filter((line, i)=>i!==index);
+            if(!prev) return prev;
+            return prev.filter((line, i)=>i!==index);
         })
     }
 
-    function updateLine(index, updatedData){
-        setLines((prev)=>{
-            prev.map((line, i)=>(i===index?{...line, ...updatedData}:line));
-        })
+    function updateLine(index, updatedData) {
+    setLines(prev => {
+        if (!prev) return prev; // o return [];
+        return prev.map((line, i) =>
+        i === index ? { ...line, ...updatedData } : line
+        );
+    });
     }
 
     return (
         <>
             {lines.map((line, index)=>(
                 <AddedLine 
-                key={index}
+                key={line.id}
                 index={index}
                 data={line}
+                updateLine={updateLine}
+                deleteLine={deleteLine}
                 />
             ))}
-            <EmptyLineR2 addLine={addLine}></EmptyLineR2>           
+            <EmptyLineR2 addLine={addLine}></EmptyLineR2>
+            <button onClick={()=>console.log(lines)}>A VER ESAS LINEAS</button>           
         </>
     )
 

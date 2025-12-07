@@ -2,7 +2,7 @@ import { useEffect } from "react"
 import { calculateDays, totalPxQ, calculateCotermPrice, calculateCustomerPrice } from "../utils/princingFunctions"
 import { use } from "react";
 
-export function useAddedLineEffect(line, setField, aN){
+export function useAddedLineEffect(line, setField, aN, index, updateLine){
 
     useEffect(() => {
         const total = totalPxQ(line.listPrice, line.quantity)
@@ -61,5 +61,9 @@ export function useAddedLineEffect(line, setField, aN){
     useEffect(()=>{
         aN.totalCustomerPrice.current.set(line.totalCustomerPrice);
     }, [])
+
+    useEffect(()=>{
+        updateLine(index, line);
+    },[line])
 
 }

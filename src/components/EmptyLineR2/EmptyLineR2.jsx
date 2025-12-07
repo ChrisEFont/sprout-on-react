@@ -22,7 +22,6 @@ export function EmptyLineR2(props){
 
     return(
         <div key={props.key} className="line">
-
             <span className="index">⬆️</span>
             <BasicInfo fields={line} refs={refs} setField={setField} aN={aN} />
             <CotermInfo fields={line} refs={refs} setField={setField} aN={aN} />

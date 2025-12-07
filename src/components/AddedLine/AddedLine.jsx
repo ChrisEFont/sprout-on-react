@@ -16,7 +16,11 @@ export function AddedLine(props){
 
     useLineEffect(line, setField, aN);
 
-    useAddedLineEffect(line, setField, aN);
+    useAddedLineEffect(line, setField, aN, props.index, props.updateLine);
+
+    function deleteLine(){
+        props.deleteLine(props.index);
+    }
 
     function mostrarLine(){
         console.log(line);
@@ -30,7 +34,7 @@ export function AddedLine(props){
             <CotermInfo fields={line} refs={refs} setField={setField} aN={aN} />
             <DiscounInfo fields={line} refs={refs} setField={setField} aN={aN} />
             <CustomerPrices fields={line} refs={refs} setField={setField} aN={aN}/>
-            <button onClick={mostrarLine}>X</button>
+            <button onClick={deleteLine}>XXX</button>
             <InternalPrices flieds={line} refs={refs} setField={setField} aN={aN}/>
         </div>
     )
