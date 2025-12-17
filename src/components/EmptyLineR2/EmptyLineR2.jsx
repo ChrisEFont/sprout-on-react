@@ -7,17 +7,22 @@ import { useLineEffect } from '../../hooks/useLineEffect';
 import { DiscounInfo } from './DiscountInfo';
 import { CustomerPrices } from './CustomerPrices';
 import { InternalPrices } from './InternalPrices';
+import { resetLine } from './resetLine';
 
 
 export function EmptyLineR2(props){
 
     const {line, setField, refs, aN} = useLineState();
 
+    let lineAdded = 0;
+
     useLineEffect(line, setField, aN);
+
+    
 
     function submitLine(){
         props.addLine(line);
-        console.log(line)
+        console.log(line);
     }
 
     return(

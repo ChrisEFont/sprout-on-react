@@ -8,8 +8,11 @@ export function PrincingTable(){
 
     const [lines, setLines] = useState([]);
 
+    const [temporalKey, setTemporalKey] = useState([crypto.randomUUID()]);
+
     function addLine(line){
-        setLines(prev => [...prev, { id: crypto.randomUUID(), ...line }]);
+        setLines(prev => [...prev, { id: crypto.randomUUID(), ...structuredClone(line) }]);
+        setTemporalKey(crypto.randomUUID());
     }
 
     function deleteLine(index){
@@ -39,7 +42,7 @@ export function PrincingTable(){
                 deleteLine={deleteLine}
                 />
             ))}
-            <EmptyLineR2 addLine={addLine}></EmptyLineR2>
+            <EmptyLineR2 addLine={addLine} key={temporalKey}></EmptyLineR2>
             <button onClick={()=>console.log(lines)}>A VER ESAS LINEAS</button>           
         </>
     )
